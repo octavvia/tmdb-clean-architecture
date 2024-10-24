@@ -6,6 +6,7 @@
 //
 
 // Presentation/Views/MovieListView.swift
+
 import SwiftUI
 
 struct MovieListView: View {
@@ -50,7 +51,8 @@ struct MovieListView: View {
                     }
                 }
             }
-            .navigationTitle("Popular Movies")
+            .navigationTitle("Min-Watch Playlist")
+            .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Cari Film")
         }
     }
     
@@ -60,8 +62,11 @@ struct MovieListView: View {
         let tmdbService = TMDBService()
         let movieRepository = MovieRepositoryImpl(tmdbService: tmdbService)
         let getMovieDetailUseCase = GetMovieDetailUseCase(repository: movieRepository)
+        let getMovieVideosUseCase = GetMovieVideosUseCase(repository: movieRepository)
         let detailViewModel = MovieDetailViewModel(getMovieDetailUseCase: getMovieDetailUseCase)
         MovieDetailView(movieId: movieId, viewModel: detailViewModel)
     }
 }
+
+
 

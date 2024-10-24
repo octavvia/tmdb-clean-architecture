@@ -6,9 +6,10 @@
 //
 
 // Domain/UseCases/GetMovieDetailUseCase.swift
+
 import Foundation
 
-class GetMovieDetailUseCase {
+public class GetMovieDetailUseCase {
     private let repository: MovieRepository
 
     init(repository: MovieRepository) {

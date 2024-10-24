@@ -36,6 +36,10 @@
 //}
 
 // TMDBAppApp.swift
+// TMDBAppApp.swift
+
+// TMDBAppApp.swift
+
 import SwiftUI
 
 @main
@@ -45,9 +49,12 @@ struct TMDBAppApp: App {
             let tmdbService = TMDBService()
             let movieRepository = MovieRepositoryImpl(tmdbService: tmdbService)
             let getPopularMoviesUseCase = GetPopularMoviesUseCase(repository: movieRepository)
-            let viewModel = MovieListViewModel(getPopularMoviesUseCase: getPopularMoviesUseCase)
-            MovieListView(viewModel: viewModel)
+            let searchMoviesUseCase = SearchMoviesUseCase(repository: movieRepository)
+            let movieListViewModel = MovieListViewModel(getPopularMoviesUseCase: getPopularMoviesUseCase, searchMoviesUseCase: searchMoviesUseCase)
+            MovieListView(viewModel: movieListViewModel)
         }
     }
 }
+
+
 
