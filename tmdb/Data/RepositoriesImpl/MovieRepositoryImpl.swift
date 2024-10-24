@@ -5,6 +5,7 @@
 //  Created by Aulia Octaviani on 24/10/24.
 //
 
+
 // Data/Repositories/MovieRepositoryImpl.swift
 import Foundation
 
@@ -19,5 +20,9 @@ class MovieRepositoryImpl: MovieRepository {
         tmdbService.fetchPopularMovies { result in
             completion(result)
         }
+    }
+    
+    func getMovieDetail(movieId: Int, completion: @escaping (Result<MovieDetail, Error>) -> Void) { // Implementasi baru
+        tmdbService.fetchMovieDetail(movieId: movieId, completion: completion)
     }
 }

@@ -10,4 +10,5 @@ import Foundation
 
 protocol MovieRepository {
     func getPopularMovies(completion: @escaping (Result<[Movie], Error>) -> Void)
+    func getMovieDetail(movieId: Int, completion: @escaping (Result<MovieDetail, Error>) -> Void) // Baru
 }

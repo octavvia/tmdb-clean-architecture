@@ -19,6 +19,22 @@
 //    }
 //}
 
+//// TMDBAppApp.swift
+//import SwiftUI
+//
+//@main
+//struct TMDBAppApp: App {
+//    var body: some Scene {
+//        WindowGroup {
+//            let tmdbService = TMDBService()
+//            let movieRepository = MovieRepositoryImpl(tmdbService: tmdbService)
+//            let getPopularMoviesUseCase = GetPopularMoviesUseCase(repository: movieRepository)
+//            let viewModel = MovieListViewModel(getPopularMoviesUseCase: getPopularMoviesUseCase)
+//            MovieListView(viewModel: viewModel)
+//        }
+//    }
+//}
+
 // TMDBAppApp.swift
 import SwiftUI
 
@@ -34,3 +50,4 @@ struct TMDBAppApp: App {
         }
     }
 }
+
