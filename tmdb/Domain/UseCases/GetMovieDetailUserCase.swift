@@ -20,3 +20,19 @@ public class GetMovieDetailUseCase {
         repository.getMovieDetail(movieId: movieId, completion: completion)
     }
 }
+
+// Domain/UseCases/GetMovieDetailUseCase.swift
+
+//import Foundation
+//
+//public class GetMovieDetailUseCase {
+//    private let repository: MovieRepository
+//
+//    public init(repository: MovieRepository) {
+//        self.repository = repository
+//    }
+//
+//    public func execute(movieId: Int, completion: @escaping (Result<Movie, Error>) -> Void) {
+//        repository.getMovieDetail(movieId: movieId, completion: completion)
+//    }
+//}

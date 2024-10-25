@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7B0C671F2CCB4BB800F3E516 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7B0C671E2CCB4BB800F3E516 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		7BFEC2072CC9F1B700B4D784 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B0C671F2CCB4BB800F3E516 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = tmdb;
 			packageProductDependencies = (
+				7B0C671E2CCB4BB800F3E516 /* Kingfisher */,
 			);
 			productName = tmdb;
 			productReference = 7BFEC1F12CC9F1B600B4D784 /* tmdb.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = 7BFEC1E82CC9F1B600B4D784;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7B0C671D2CCB4B7A00F3E516 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7BFEC1F22CC9F1B600B4D784 /* Products */;
 			projectDirPath = "";
@@ -558,6 +567,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B0C671D2CCB4B7A00F3E516 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B0C671E2CCB4BB800F3E516 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B0C671D2CCB4B7A00F3E516 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7BFEC1E92CC9F1B600B4D784 /* Project object */;
 }

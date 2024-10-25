@@ -7,18 +7,37 @@
 
 // Domain/UseCases/SearchMoviesUseCase.swift
 
+//import Foundation
+//
+//public class SearchMoviesUseCase {
+//    private let repository: MovieRepository
+//
+//    init(repository: MovieRepository) {
+//        self.repository = repository
+//    }
+//
+//    public func execute(query: String, completion: @escaping (Result<[Movie], Error>) -> Void) {
+//        repository.searchMovies(query: query, completion: completion)
+//    }
+//}
+
+// Domain/UseCases/SearchMoviesUseCase.swift
+
 import Foundation
 
 public class SearchMoviesUseCase {
     private let repository: MovieRepository
 
-    init(repository: MovieRepository) {
+    public init(repository: MovieRepository) {
         self.repository = repository
     }
 
     public func execute(query: String, completion: @escaping (Result<[Movie], Error>) -> Void) {
-        repository.searchMovies(query: query, completion: completion)
+        repository.searchMovies(query: query) { result in
+            completion(result)
+        }
     }
 }
+
 
 
