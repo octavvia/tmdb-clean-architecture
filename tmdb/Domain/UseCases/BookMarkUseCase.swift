@@ -1,15 +1,6 @@
+/// Domain/UseCases/BookmarkMovieUseCase.swift
 //
-//  BookMarkUseCase.swift
-//  tmdb
-//
-//  Created by Aulia Octaviani on 30/10/24.
-//
-
-// Domain/UseCases/BookmarkMovieUseCase.swift
-
 import Foundation
-
-// Domain/UseCases/BookmarkMovieUseCase.swift
 
 public class BookmarkMovieUseCase {
     private let bookmarkRepository: BookmarkRepository
@@ -18,15 +9,15 @@ public class BookmarkMovieUseCase {
         self.bookmarkRepository = bookmarkRepository
     }
     
-    public func execute(movie: MovieDetail) {
+    public func execute(movie: Movie) {
         if bookmarkRepository.isBookmarked(movieId: movie.id) {
             bookmarkRepository.removeBookmark(movieId: movie.id)
         } else {
-            bookmarkRepository.addBookmark(movieId: movie.id)
+            bookmarkRepository.addBookmark(movie: movie)
         }
     }
     
-    // Tambahkan metode publik ini untuk mengecek status bookmark
+    // Menambahkan metode untuk mengecek status bookmark
     public func isBookmarked(movieId: Int) -> Bool {
         return bookmarkRepository.isBookmarked(movieId: movieId)
     }

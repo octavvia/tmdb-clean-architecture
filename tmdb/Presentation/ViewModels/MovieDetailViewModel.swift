@@ -45,11 +45,21 @@ public class MovieDetailViewModel: ObservableObject {
 
     
     
+//    public func toggleBookmark() {
+//        guard let movie = movieDetail else { return }
+//        bookmarkMovieUseCase.execute(movie: movie)
+//        isBookmarked.toggle()
+//    }
     public func toggleBookmark() {
-        guard let movie = movieDetail else { return }
+        guard let movieDetail = movieDetail else { return }
+        
+        // Konversi dari MovieDetail ke Movie
+        let movie = Movie(id: movieDetail.id, title: movieDetail.title, overview: movieDetail.overview, posterPath: movieDetail.posterPath)
+        
         bookmarkMovieUseCase.execute(movie: movie)
         isBookmarked.toggle()
     }
+
     
     
     // Fungsi fetchMovieDetail bertanggung jawab untuk mengambil data detail film berdasarkan ID.
