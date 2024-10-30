@@ -7,6 +7,7 @@
 
 
 // Data/Repositories/MovieRepositoryImpl.swift
+// pada file ini merupakan penerapan kelanjutan dari repository pada layer domain
 
 import Foundation
 import CoreData
@@ -25,7 +26,9 @@ public class MovieRepositoryImpl: MovieRepository {
         service.fetchPopularMovies { result in
             switch result {
             case .success(let movies):
+                // menyimpan pada core-data
                 self.saveMoviesToCoreData(movies: movies)
+                // melajutkan untuk ditampilkan
                 completion(.success(movies))
             case .failure(let error):
                 // Jika gagal ambil dari API, coba ambil dari Core Data

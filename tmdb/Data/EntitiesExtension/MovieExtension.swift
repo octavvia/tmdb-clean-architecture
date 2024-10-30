@@ -7,11 +7,7 @@
 
 // Data/Entities/MovieEntity+Extension.swift
 
-// Data/Entities/MovieEntity+Extension.swift
 
-//import Foundation
-//import CoreData
-//
 extension MovieEntity {
     func toDomain() -> Movie {
         return Movie(

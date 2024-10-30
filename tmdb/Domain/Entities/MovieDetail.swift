@@ -5,6 +5,7 @@
 //  Created by Aulia Octaviani on 24/10/24.
 //
 
+// Domain/Entities/MovieDetail.swift
 import Foundation
 
 public struct MovieDetail: Codable, Identifiable {
