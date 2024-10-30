@@ -26,4 +26,9 @@ public class BookmarkRepository {
     public func removeBookmark(movieId: Int) {
         bookmarkedMovies.remove(movieId)
     }
+    
+    public func getAllBookmarkedMovies() -> [Int] {
+        return Array(bookmarkedMovies)
+    }
+
 }
